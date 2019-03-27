@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Vehicle Details </title>
+
+<style>
+div.a { 
+  text-align: center;
+  color: #6495ED;
+font-size: 40px;
+}
+
+div.d { color: DarkGoldenRod;
+font-size: 30px;}
+
+table {
+    border-collapse: collapse;
+}
+table{
+color: white;
+}
+textarea {
+  width: 70%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+
+input[type=text], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+<script>
+function validateForm()
+{
+
+  localStorage.setItem('fname', document.getElementById('fname').value);
+  localStorage.setItem('lname', document.getElementById('lname').value);
+  localStorage.setItem('phone', document.getElementById('phno').value);
+  localStorage.setItem('mail', document.getElementById('mail').value);
+  localStorage.setItem('add', document.getElementById('add').value);
+  localStorage.setItem('city', document.getElementById('city').value);
+  localStorage.setItem('make', document.getElementById('make').value);
+  localStorage.setItem('model', document.getElementById('model').value);
+  localStorage.setItem('year', document.getElementById('year').value); 
+}
+
+</script>
+
+</head>
+
+<body style="background-color:black;">
+
+<form name="myForm" action="JD_Power.html" onsubmit="return validateForm()" method="post">
+
+<div class = "a"><h1> DUBONCHAE VEHICULES</h1></div>
+
+<div class = "d"><h3> Please fill the below form. All fields are mandatory </h3></div>
+<br/>
+<table cellpadding="20">
+<tr><th>
+First Name:
+</th>
+<th>
+<input type="text" id="fname" name="firstname" placeholder="Your first name" required></th>
+</tr>
+<tr><th>
+Last Name:
+</th>
+<th>
+<input type="text" id="lname" name="lastname" placeholder="Your last name" required></th>
+</tr>
+<tr><th>
+Address:
+</th>
+<th>
+<textarea id="add" placeholder="Enter Address" required></textarea>
+</th>
+</tr>
+<tr><th>
+City:
+</th>
+<th>
+<input type="text" id="city" name="city" placeholder="City" required>
+</th>
+</tr>
+<tr><th>
+Phone Number:
+</th>
+<th>
+
+<input type="tel" id="phno" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       placeholder="Enter phone number" required>
+<br/>Format: 123-456-7890 or (123)456-7890
+</th>
+</tr>
+<tr><th>
+E-mail:
+</th>
+<th>
+<input type="email" id="mail" placeholder="Enter your mailing id"
+       size="30" required>
+</th>
+</tr>
+<tr><th style= "font-size:20px; color: DarkGoldenRod">
+Vehicle Details
+</th>
+</tr>
+<tr><th>Make:</th>
+<th>
+<input type="text" id="make" name="make" required></th>
+</tr>
+<tr><th>Model:</th>
+<th>
+<input type="text" id="model" name="model" required>
+</th>
+</tr>
+<tr><th>Year:</th>
+<th>
+<input type="number" id="year" name="year" required>
+</th>
+</tr>
+<tr>
+<th align="right">
+<input type="button" value="Back" onclick="location.href='Home_Page.html';">
+</th>
+<th>  <input type="submit" value="Submit">
+</th>
+</tr>
+</table>
+</form>
+</body>
+
+</html>
