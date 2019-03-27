@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+div.a { 
+  text-align: center;
+  color: #6495ED;
+font-size: 40px;
+}
+
+div.d { color: DarkGoldenRod;
+font-size: 30px;}
+
+</style>
+
+</head>
+
+<body style="background-color:black;" >
+
+<title> Thank You </title>
+
+<div class = "a"><h1> DUBONCHAE VEHICULES</h1></div>
+
+<div class = "d"><h5> Thank you. Please find the entered details below: </h5></div>
+ <div style= "color:white">,
+<script>
+function dataInput() {
+
+if (typeof(Storage) !== "undefined") {
+
+ var fname = localStorage.getItem('fname');
+ var lname = localStorage.getItem('lname');
+ var phone = localStorage.getItem('phone');
+ var mail = localStorage.getItem('mail');
+ var add = localStorage.getItem('add');
+ var city = localStorage.getItem('city');
+ var make = localStorage.getItem('make');
+ var model = localStorage.getItem('model');
+ var year = localStorage.getItem('year');
+
+
+"First name:" ;
+"Last name:" ;
+"Phone Number:"; 
+"E-mail:" ;
+"Address:";
+"City:" ;
+"Vehicle Model:";  
+"Make:" ;
+"Year:" ;
+
+  } 
+else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+  }
+
+</script>
+Click on the below link to know more about the vehicle.
+</div>
+</body>
+
+</html>
